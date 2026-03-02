@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Bot · Telegram Mini App</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f2f4f8;
+  display:flex;
+  justify-content:center;
+  padding:20px;
+}
+.app-container{max-width:400px;width:100%}
+
+.status-pill{
+  background:#13233c;
+  color:white;
+  padding:8px 18px;
+  border-radius:40px;
+  display:inline-flex;
+  align-items:center;
+  margin-bottom:20px;
+}
+.status-dot{
+  width:8px;height:8px;
+  background:#b0b9c9;
+  border-radius:50%;
+  margin-right:10px;
+}
+
+.main-title{
+  font-size:2.5rem;
+  font-weight:700;
+  color:#13233c;
+}
+.sub-title{
+  font-size:0.7rem;
+  letter-spacing:2px;
+  color:#5f6b7a;
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.card{
+  background:#fff;
+  border-radius:25px;
+  padding:18px 20px;
+  margin-bottom:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 10px 25px -8px rgba(0,0,0,0.08);
+  cursor:pointer;
+  transition:0.2s;
+}
+.card:hover{
+  transform:translateY(-2px);
+}
+
+.card-left{display:flex;align-items:center;gap:16px}
+
+.icon-box{
+  width:52px;height:52px;
+  border-radius:16px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:1.6rem;
+}
+
+.card-blue{border-left:6px solid #2b7aff}
+.card-green{border-left:6px solid #28c76f}
+.card-pink{border-left:6px solid #ff5b7c}
+
+.icon-blue{background:#e2ecff;color:#2b7aff}
+.icon-green{background:#def7e8;color:#28c76f}
+.icon-pink{background:#ffe2e9;color:#ff5b7c}
+
+.card-title{font-weight:600;color:#1a2639}
+.card-subtitle{font-size:0.8rem;color:#7d8a9c}
+
+.divider-wrapper{
+  display:flex;
+  align-items:center;
+  margin:12px 0;
+}
+.divider-line{flex:1;height:1px;background:#d9e0eb}
+.divider-text{
+  margin:0 15px;
+  font-size:0.75rem;
+  letter-spacing:3px;
+  color:#7d8a9c;
+}
+
+.footer{
+  text-align:center;
+  margin-top:20px;
+  letter-spacing:2px;
+  color:#7d8a9c;
+  font-size:0.8rem;
+}
+</style>
+</head>
+
+<body>
+<div class="app-container">
+
+<div class="status-pill">
+<span class="status-dot"></span> System Ready
+</div>
+
+<h1 class="main-title">Premium Bot</h1>
+<div class="sub-title">MONETAG HIGH CPM</div>
+
+<div class="card card-blue" id="watchAd">
+  <div class="card-left">
+    <div class="icon-box icon-blue"><i class="fas fa-eye"></i></div>
+    <div>
+      <div class="card-title">Watch 1 Ad</div>
+      <div class="card-subtitle">Manual Mode (Single)</div>
+    </div>
+  </div>
+  <i class="fas fa-chevron-right"></i>
+</div>
+
+<div class="divider-wrapper">
+  <div class="divider-line"></div>
+  <div class="divider-text">AUTO LOOP</div>
+  <div class="divider-line"></div>
+</div>
+
+<div class="card card-green" id="autoOn">
+  <div class="card-left">
+    <div class="icon-box icon-green"><i class="fas fa-bolt"></i></div>
+    <div>
+      <div class="card-title">Auto Ads ON</div>
+      <div class="card-subtitle">Manual Trigger Mode</div>
+    </div>
+  </div>
+</div>
+
+<div class="card card-pink" id="autoOff">
+  <div class="card-left">
+    <div class="icon-box icon-pink"><i class="fas fa-power-off"></i></div>
+    <div>
+      <div class="card-title">Auto Ads OFF</div>
+      <div class="card-subtitle">Stop System</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+DEVELOPER NURNOBI
+</div>
+
+</div>
+
+<script>
+// Manual Ad Show
+document.getElementById("watchAd").addEventListener("click", function(){
+   if(typeof show_10672198 === "function"){
+       show_10672198();
+   } else {
+       alert("Ad loading...");
+   }
+});
+
+// Auto ON (only visual message, no real auto loop for safety)
+document.getElementById("autoOn").addEventListener("click", function(){
+   alert("Auto Mode Enabled (Manual Click Required)");
+});
+
+// Auto OFF
+document.getElementById("autoOff").addEventListener("click", function(){
+   alert("Auto Mode Disabled");
+});
+</script>
+
+<!-- Monetag SDK (Correct Position) -->
+<script src='//libtl.com/sdk.js'
+        data-zone='10672198'
+        data-sdk='show_10672198'></script>
+
+</body>
+</html>
